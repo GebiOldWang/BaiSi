@@ -1,0 +1,31 @@
+//
+//  PrefixHeader.pch
+//  仿-百思不得姐
+//
+//  Created by 上海银来（集团）有限公司 on 16/3/16.
+//  Copyright © 2016年 Old.Wang. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+Kuozhan.h"
+#import "UIBarButtonItem+Kuozhan.h"
+#import "NSDate+Tuozhan.h"
+#import "Bsconst.h"
+
+#ifdef DEBUG
+#define P(...) NSLog(__VA_ARGS__)
+#else
+#define P(...)
+#endif
+
+#define ViewW [UIScreen mainScreen].bounds.size.width
+#define ViewH [UIScreen mainScreen].bounds.size.height
+
+#define PFUNC P(@"%s",__func__)
+
+#define RGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define DefaultColor RGBColor(233 ,233 ,233)
+
+#endif /* PrefixHeader_pch */
